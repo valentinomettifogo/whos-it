@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Deep gradient backdrop -->
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#090916" />
+      <stop offset="100%" stop-color="#030307" />
+    </radialGradient>
+    <!-- Glowing filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="512" height="512" rx="128" fill="url(#bg)" stroke="#00f0ff" stroke-width="4" stroke-opacity="0.2"/>
+  
+  <g transform="translate(256, 256)">
+    <!-- Sonar ring -->
+    <circle r="210" fill="none" stroke="#00f0ff" stroke-width="2" stroke-opacity="0.1" />
+    <!-- Rotating outer dashed rings -->
+    <circle r="160" fill="none" stroke="#00f0ff" stroke-width="4" stroke-dasharray="16, 20" stroke-opacity="0.6" />
+    <circle r="120" fill="none" stroke="#00ffaa" stroke-width="2" stroke-dasharray="4, 12" stroke-opacity="0.8" />
+    
+    <!-- Target Lock corner indicators -->
+    <!-- Top-Left -->
+    <path d="M -80 -80 L -120 -80 L -120 -120" fill="none" stroke="#00f0ff" stroke-width="6" stroke-linecap="round" filter="url(#glow)" />
+    <!-- Top-Right -->
+    <path d="M 80 -80 L 120 -80 L 120 -120" fill="none" stroke="#00f0ff" stroke-width="6" stroke-linecap="round" filter="url(#glow)" />
+    <!-- Bottom-Left -->
+    <path d="M -80 80 L -120 80 L -120 120" fill="none" stroke="#00f0ff" stroke-width="6" stroke-linecap="round" filter="url(#glow)" />
+    <!-- Bottom-Right -->
+    <path d="M 80 80 L 120 80 L 120 120" fill="none" stroke="#00f0ff" stroke-width="6" stroke-linecap="round" filter="url(#glow)" />
+    
+    <!-- Central glowing tracker core -->
+    <circle r="30" fill="#00ffaa" opacity="0.2" filter="url(#glow)" />
+    <circle r="15" fill="#00ffaa" filter="url(#glow)" />
+    <circle r="6" fill="#ffffff" />
+    
+    <!-- Fine HUD crosshair dots -->
+    <circle cx="0" cy="-60" r="3" fill="#00f0ff" opacity="0.8" />
+    <circle cx="0" cy="60" r="3" fill="#00f0ff" opacity="0.8" />
+    <circle cx="-60" cy="0" r="3" fill="#00f0ff" opacity="0.8" />
+    <circle cx="60" cy="0" r="3" fill="#00f0ff" opacity="0.8" />
+  </g>
+  
+  <!-- Text WHO'S IT in Orbitron futuristic font -->
+  <text x="256" y="445" font-family="'Orbitron', sans-serif" font-size="34" font-weight="900" fill="#ffffff" letter-spacing="8" text-anchor="middle" filter="url(#glow)">WHO'S IT</text>
+</svg>
