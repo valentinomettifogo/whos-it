@@ -150,7 +150,7 @@
   <!-- Central Status HUD Window -->
   <div class="z-20 pointer-events-none max-w-sm md:max-w-md w-11/12 text-center flex flex-col items-center justify-center p-6 md:p-8 bg-black/55 backdrop-blur-md border border-cyber-blue/10 rounded-2xl shadow-[0_0_50px_rgba(0,240,255,0.03)] animate-float-hud">
     <!-- Cyber Decorative Top Bar -->
-    <div class="w-16 md:w-24 h-0.5 bg-gradient-to-r from-transparent via-cyber-blue/50 to-transparent mb-5 md:mb-6"></div>
+    <div class="w-16 md:w-24 h-0.5 bg-linear-to-r from-transparent via-cyber-blue/50 to-transparent mb-5 md:mb-6"></div>
 
     {#if faseGioco === 'conteggio' && countdown !== null}
       <div class="font-display text-[10px] text-cyber-blue tracking-[0.3em] uppercase mb-2 animate-pulse">Initializing Scan</div>
@@ -181,7 +181,7 @@
     {/if}
 
     <!-- Cyber Decorative Bottom Bar -->
-    <div class="w-16 md:w-24 h-0.5 bg-gradient-to-r from-transparent via-cyber-blue/50 to-transparent mt-5 md:mt-6"></div>
+    <div class="w-16 md:w-24 h-0.5 bg-linear-to-r from-transparent via-cyber-blue/50 to-transparent mt-5 md:mt-6"></div>
   </div>
 
   <!-- Finger Reticles Layer -->
