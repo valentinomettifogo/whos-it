@@ -1,5 +1,6 @@
 {
 	"name": "whos-it",
+	"description": "Multitouch finger picker PWA — place fingers, one is chosen at random",
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",

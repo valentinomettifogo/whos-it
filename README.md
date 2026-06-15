@@ -1,42 +1,41 @@
-# sv
+# Who's It
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Multitouch finger picker PWA — place fingers on the screen, one is chosen at random.
 
-## Creating a project
+**[Live demo →](https://whos-it-peach.vercel.app)**
 
-If you're seeing this, you've probably already done this step. Congrats!
+## How it works
 
-```sh
-# create a new project
-npx sv create my-app
-```
+1. Everyone places a finger on the screen at the same time
+2. A 2-second countdown locks in all detected touch points
+3. One finger is randomly selected as the winner — everyone else is out
 
-To recreate this project with the same configuration:
+Great for deciding who goes first in card games, board games, or anything else where you need a quick, fair pick.
 
-```sh
-# recreate this project
-npx sv@0.15.3 create --template minimal --types ts --add tailwindcss="plugins:none" --install npm whos-it
-```
+## Tech stack
 
-## Developing
+- [SvelteKit 2](https://svelte.dev/docs/kit) + [Svelte 5](https://svelte.dev/docs/svelte) (runes)
+- TypeScript
+- Tailwind CSS 4
+- PWA with offline support via service worker
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Getting started
 
-```sh
+```bash
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+Open `http://localhost:5173` on a touch device or use Chrome DevTools touch simulation.
 
-To create a production version of your app:
+Other commands:
 
-```sh
-npm run build
+```bash
+npm run build      # production build
+npm run preview    # preview production build locally
+npm run check      # TypeScript + Svelte type check
 ```
 
-You can preview the production build with `npm run preview`.
+## Install as PWA
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+On mobile, tap **Add to Home Screen** from the browser menu. The app runs in standalone mode (no browser chrome) and works offline.

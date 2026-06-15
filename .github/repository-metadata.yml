@@ -1,0 +1,12 @@
+description: "Multitouch finger picker PWA — place fingers, one is chosen at random"
+homepage: "https://whos-it-peach.vercel.app"
+visibility: public
+topics:
+  - svelte
+  - sveltekit
+  - typescript
+  - tailwindcss
+  - pwa
+  - multitouch
+  - party-game
+  - svelte5
